@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "sideEffects": false,
   "scripts": {
-    "build": "npm-run-all --parallel build:types build:vite",
-    "build:app": "bash ./tools/optimizeDeps.sh && vite build",
+    "build": "npm-run-all --parallel build:types build:react",
     "build:types": "tsc --build",
+    "build:react": "bash ./tools/optimizeDeps.sh && vite build",
     "serve": "vite preview",
     "start": "bash ./tools/optimizeDeps.sh && vite"
   },
