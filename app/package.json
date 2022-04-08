@@ -4,10 +4,10 @@
   "sideEffects": false,
   "scripts": {
     "build": "npm-run-all --parallel build:types build:vite",
-    "build:app": "vite build",
+    "build:app": "bash ./tools/optimizeDeps.sh && vite build",
     "build:types": "tsc --build",
     "serve": "vite preview",
-    "start": "vite"
+    "start": "bash ./tools/optimizeDeps.sh && vite"
   },
   "dependencies": {
     "@types/react": "18.0.0",
